@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>тавтай морил</h2>
+          <div class="form-input">
+            <label>chat-д нэврэх нэрээ оруулна уу</label>
+            <input type="text" id="username" />
+          </div>
+          <div class="form-input">
+            <button id="sender-start-con-btn">host id үүсгэх</button>
+          </div>
+          <div class="form-input" id="join-id"></div>
+        </div>
+      </div>
+
+      <div class="screen fs-screen">
+        <div class="before">
+          <div class="file-upload">
+            <div class="file-input">
+              <label for="file-input">
+                <svg
+                  style="width: 40px; height: 40px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                  />
+                </svg>
+              </label>
+              <input type="file" id="file-input" />
+            </div>
+            <div class="files-list">
+              <div class="title">Share-лэгдсэн file-ууд</div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-screen">
+          <div class="header">
+            <div class="logo">Чат</div>
+            <button id="exit-chat">гарах</button>
+          </div>
+          <div class="messages"></div>
+          <div class="typebox">
+            <input type="text" id="message-input" />
+            <button id="send-message">илгээх</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+  </body>
+</html>

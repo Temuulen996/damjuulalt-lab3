@@ -1,0 +1,223 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+}
+.screen {
+  display: none;
+}
+.screen.active {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.app {
+  width: 100%;
+  height: 100vh;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background: #fff;
+}
+
+.join-screen .form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+}
+.join-screen .form .form-input {
+  margin: 10px 0px;
+}
+.join-screen .form .form-input-1 {
+  margin: 10px 0px;
+}
+.join-screen .form .form-input-1 input {
+  padding: 5px;
+}
+.join-screen .form h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 45px;
+  font-family: "Montserrat", sans-serif;
+}
+.join-screen .form button {
+  background: #3236a8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.join-screen .form #join-id b {
+  color: #3236a8;
+  display: block;
+  margin-top: 20px;
+}
+.join-screen .form #join-id span {
+  display: inline-block;
+  font-size: 25px;
+  font-family: monospace;
+  color: #3236a8;
+  padding: 10px;
+  border: 1px solid #3236a8;
+  margin-top: 5px;
+}
+.join-screen .form .form-input label {
+  color: #3236a8;
+  font-size: 18px;
+}
+.join-screen .form .form-input input {
+  display: block;
+  margin: 10px 0px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #3236a8;
+  color: #3236a8;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.fs-screen {
+  padding: 20px;
+}
+.fs-screen .before {
+  width: 50%;
+}
+.fs-screen .file-upload {
+  max-width: 500px;
+}
+
+.fs-screen .file-input {
+  width: 30%;
+  border: 2px solid #555;
+}
+.fs-screen .file-input label {
+  display: block;
+  width: 100%;
+  padding: 40px 50px;
+  text-align: center;
+  color: #3236a8;
+  font-size: 18px;
+}
+.fs-screen .file-input input {
+  display: none;
+}
+.fs-screen .files-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 500px;
+  flex-wrap: wrap;
+}
+.fs-screen .files-list .title {
+  width: 100%;
+  margin: 20px 0px;
+}
+.fs-screen .files-list .item {
+  width: 33%;
+  min-width: 200px;
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 5px 2px;
+}
+.fs-screen .files-list .item .progress {
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: greenyellow;
+  font-family: "Montserrat";
+}
+.fs-screen .files-list .item .filename {
+  padding: 5px;
+  font-size: 12px;
+  border-top: 1px solid #eee;
+}
+
+.fs-screen .chat-screen {
+  width: 50%;
+  background-color: red;
+}
+.fs-screen .chat-screen .header {
+  width: 100%;
+  background-color: #3236a8;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.fs-screen .chat-screen .header .logo {
+  font-size: 18px;
+  color: #eee;
+  font-weight: 600;
+}
+.fs-screen .chat-screen .header button {
+  padding: 5px 10px;
+  border: 1px solid #eee;
+  background: transparent;
+  color: #eee;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+.fs-screen .chat-screen .messages {
+  width: 100%;
+  height: calc(100% - 100px);
+  background: #f5f5f5;
+  overflow: auto;
+}
+.fs-screen .chat-screen .messages .message {
+  display: flex;
+  padding: 10px;
+}
+.fs-screen .chat-screen .messages .message > div {
+  max-width: 80%;
+  background: #fff;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+.fs-screen.chat-screen .messages .message.my-message {
+  justify-content: flex-end;
+}
+.fs-screen .chat-screen .messages .message.other-message {
+  justify-content: flex-start;
+}
+.fs-screen .chat-screen .messages .message .name {
+  font-size: 13px;
+  color: #3236a8;
+  margin-bottom: 5px;
+}
+.fs-screen .chat-screen .messages .message .text {
+  word-wrap: break-word;
+}
+.fs-screen .chat-screen .messages .update {
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+}
+.fs-screen .chat-screen .typebox {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.fs-screen .chat-screen .typebox input {
+  flex: 1;
+  height: 50px;
+  font-size: 18px;
+}
+.fs-screen .chat-screen .typebox button {
+  width: 80px;
+  height: 100%;
+  background: #111;
+  color: #eee;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
